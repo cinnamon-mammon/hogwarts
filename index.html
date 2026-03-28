@@ -8,6 +8,270 @@
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"/>
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins";
+}
+:root {
+  --bg-color: #0f1924;
+  --second-bg-color: #c0a57b;
+  --third-bg-color: #F4CC4A;
+  --fourth-bg-color: #0000FF;
+  --fifth-bg-color: #008000;
+  --text-color: white;
+  --main-color: #800000;
+}
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 4rem 15%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+#menu-icon{
+    font-size: 3.5rem;
+    color: var(--main-color);
+    display: none;
+}
+.logo{
+    font-size: 3rem;
+    color: #800000;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.logo-hover{
+    transform: scale(1.1);
+}
+.navbar a{
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    border-bottom: 3px solid transparent;
+}
+.navbar a:hover{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color)
+}
+.gradient-btn{
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+     background: linear-gradient(
+
+        270deg,
+        #c0a57b 10%,
+        #800000 100%
+    );
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3 ease-in-out;
+    color: white;
+    border: none;
+    text-wrap: nowrap;
+}
+.gradient-btn:hover{
+    transform: scale(1.05);
+}
+section {
+    min-height: 100vh;
+    padding: 10rem 15%;
+}
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+.home-content {
+    font-size: 2.5vmin;
+    margin-top: 150px;
+    color: var(--second-bg-color);
+    text-align: center;
+}
+.home-content h1 {
+    color: white;
+}
+.home-content h3{
+    font-size: 3vmin;
+    font-family: Garamond, 'Times New Roman', Times, serif;
+}
+.home-content h2 {
+    font-size: 3.5vmin;
+    color: var(--main-color);
+}
+.home-img img {
+    box-shadow: 0 0 25px var(--text-color);
+    transition: 0.4s ease-in-out;
+}
+.home-img img:hover {
+    box-shadow: 0 0 25px var(--text-color),
+                0 0 50px var(--text-color),
+                0 0 100px var(--text-color);
+}
+.gryffin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    
+}
+.gryffin-img img {
+    width: 25vw;
+    border: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    transition: 0.4s ease-in-out;
+}
+.gryffin-img img:hover {
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+}
+.gryffin-content h2 {
+    font-size: 7rem;
+    text-align: left;
+    color: #800000;
+}
+.gryffin-content h3 {
+    font-size: 1.8rem;
+    color: whitesmoke;
+}
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+::-webkit-scrollbar-track {
+    background-color: var(--bg-color);
+}
+.huffle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    
+}
+.huffle-img img {
+    width: 20vw;
+    border: 50%;
+    box-shadow: 0 0 25px var(--third-bg-color);
+    transition: 0.4s ease-in-out;
+}
+.huffle-img img:hover {
+    box-shadow: 0 0 25px var(--third-bg-color),
+                0 0 50px var(--third-bg-color),
+                0 0 100px var(--third-bg-color);
+}
+.huffle-content h2 {
+    font-size: 7rem;
+    text-align: left;
+    color: #F4CC4A;
+}
+.huffle-content h3 {
+    font-size: 1.8rem;
+    color: whitesmoke;
+}
+.raven {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    
+}
+.raven-img img {
+    width: 25vw;
+    border: 50%;
+    box-shadow: 0 0 25px var(--fourth-bg-color);
+    transition: 0.4s ease-in-out;
+}
+.raven-img img:hover {
+    box-shadow: 0 0 25px var(--fourth-bg-color),
+                0 0 50px var(--fourth-bg-color),
+                0 0 100px var(--fourth-bg-color);
+}
+.raven-content h2 {
+    font-size: 7rem;
+    text-align: left;
+    color: #0000FF;
+}
+.raven-content h3 {
+    font-size: 1.8rem;
+    color: whitesmoke;
+}
+
+.slyth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    
+}
+.slyth-img img {
+    width: 24vw;
+    border: 50%;
+    box-shadow: 0 0 25px var(--fifth-bg-color);
+    transition: 0.4s ease-in-out;
+}
+.slyth-img img:hover {
+    box-shadow: 0 0 25px var(--fifth-bg-color),
+                0 0 50px var(--fifth-bg-color),
+                0 0 100px var(--fifth-bg-color);
+}
+.slyth-content h2 {
+    font-size: 7rem;
+    text-align: left;
+    color: #008000;
+}
+.slyth-content h3 {
+    font-size: 1.8rem;
+    color: whitesmoke;
+}
+.enroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    
+}
+.enroll-img img {
+    width: 40vw;
+    border: 50%;
+    box-shadow: 0 0 25px var(--second-bg-color);
+    transition: 0.4s ease-in-out;
+}
+.enroll-img img:hover {
+    box-shadow: 0 0 25px var(--second-bg-color),
+                0 0 50px var(--second-bg-color),
+                0 0 100px var(--second-bg-color);
+}
+.enroll-content h2 {
+    font-size: 7rem;
+    text-align: center;
+    color: var(--second-bg-color);
+}
+    </style>
   </head>
   <body>
 
